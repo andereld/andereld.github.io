@@ -24,11 +24,11 @@ end
 group :development do
   gem 'sqlite3'
   gem 'capistrano'
+  gem 'rspec-rails'
 end
 
 group :test do
   gem 'sqlite3'
-
-  # Pretty printed test output
-  gem 'turn', :require => false
+  gem 'rspec'
+  gem 'autotest'
 end
