@@ -29,8 +29,24 @@ set :normalize_asset_timestamps, false
 set :rake, "rake --trace"
 
 namespace :deploy do
+  desc "Symlink database.yml"
   task :symlink_shared do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+  end
+
+  desc "Zero-downtime restart of Unicorn"
+  task :restart, :except => { :no_release => true } do
+    run "kill -USR2 `cat /tmp/unicorn.www.eldhuset.org.pid`"
+  end
+
+  desc "Start unicorn"
+  task :start, :except => { :no_release => true } do
+    run "cd #{current_path} ; bundle exec unicorn_rails -c config/unicorn.rb -D"
+  end
+
+  desc "Stop unicorn"
+  task :stop, :except => { :no_release => true } do
+    run "kill -QUIT `cat /tmp/unicorn.www.eldhuset.org.pid`"
   end
 end
 
