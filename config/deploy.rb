@@ -9,6 +9,8 @@ require "rvm/capistrano"
 set :rvm_ruby_string, '1.9.2-head@www-eldhuset.org'
 set :rvm_type, :user  # Don't use system-wide RVM
 
+load 'deploy/assets'
+
 set :application, "www.eldhuset.org"
 set :user, "www-eldhuset.org"
 set :use_sudo, false
