@@ -26,7 +26,7 @@ set :rails_env, "production"
 set :deploy_to, "/home/www-eldhuset.org/app"
 set :normalize_asset_timestamps, false
 
-set :rake "rake --trace"
+set :rake, "rake --trace"
 
 namespace :deploy do
   task :symlink_shared do
