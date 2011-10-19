@@ -3,7 +3,11 @@
   %head
     %title www.eldhuset.org
     = stylesheet_link_tag "application"
+    /[if lt IE 8]
+      = stylesheet_link_tag "blueprint/ie"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = yield
+    %div.container
+      %div.span-16.prepend-4.append-4.last
+        = yield
