@@ -2,6 +2,9 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 gem 'unicorn'
+gem 'jquery-rails'
+gem 'haml'
+gem 'maruku'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -11,17 +14,12 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-
 group :production do
   gem 'pg'
 end
 
 group :development do
+  gem 'haml-rails'
   gem 'sqlite3'
   gem 'capistrano'
   gem 'rspec-rails'

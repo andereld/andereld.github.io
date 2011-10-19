@@ -1,6 +1,10 @@
 WwwEldhusetOrg::Application.routes.draw do
   
-  match '/', :to => redirect('/index.html')
+  root :to => "pages#home"
+
+  get "pages/home"
+  get "pages/about"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
