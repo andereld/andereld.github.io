@@ -26,6 +26,8 @@ set :rails_env, "production"
 set :deploy_to, "/home/www-eldhuset.org/app"
 set :normalize_asset_timestamps, false
 
+set :rake "rake --trace"
+
 namespace :deploy do
   task :symlink_shared do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
