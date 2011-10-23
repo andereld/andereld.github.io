@@ -29,4 +29,5 @@ group :test do
   gem 'sqlite3'
   gem 'rspec'
   gem 'autotest'
+  gem 'spork'
 end
