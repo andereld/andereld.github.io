@@ -30,7 +30,6 @@ GEM
     activesupport (3.1.1)
       multi_json (~> 1.0)
     arel (2.2.1)
-    bluecloth (2.1.0)
     builder (3.0.0)
     capistrano (2.9.0)
       highline
@@ -109,6 +108,7 @@ GEM
       thor (~> 0.14.6)
     raindrops (0.7.0)
     rake (0.8.7)
+    rdiscount (1.6.8)
     rdoc (3.10)
       json (~> 1.4)
     rspec (2.7.0)
@@ -159,7 +159,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bluecloth
   capistrano
   coffee-rails (~> 3.1.1)
   guard-rspec
@@ -169,6 +168,7 @@ DEPENDENCIES
   pg
   rails (= 3.1.1)
   rake (= 0.8.7)
+  rdiscount
   rspec
   rspec-rails
   sass-rails (~> 3.1.4)
