@@ -23,11 +23,12 @@ group :development do
   gem 'sqlite3'
   gem 'capistrano'
   gem 'rspec-rails'
+  gem 'guard-rspec'
 end
 
 group :test do
   gem 'sqlite3'
   gem 'rspec'
-  gem 'autotest'
+  gem 'webrat'
   gem 'spork'
 end

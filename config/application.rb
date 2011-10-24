@@ -44,7 +44,9 @@ module WwwEldhusetOrg
 
     config.generators do |g|
       g.template_engine :haml
-      g.test_framework  :rspec, :views => false
+      g.test_framework  :rspec, :views => false, :helper => false
+      g.view_specs false
+      g.helper_specs false
     end
   end
 end
