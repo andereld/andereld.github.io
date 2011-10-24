@@ -20,6 +20,8 @@ body {
 
 header {
   background-color: $accent-color;
+  margin-bottom: 1em;
+//  border-bottom: .5em solid darken($accent-color, 10%);
 }
 
 nav {
@@ -28,7 +30,7 @@ nav {
 
   li {
     list-style-type: none;
-    display: inline-block;
+    display: inline;
   }
 
   li a {
@@ -66,7 +68,7 @@ a {
 div.container {
   h1 {
     color: $accent-color;
-    margin-left: -40px; // som pull-1 i blueprint/grid.css
+    margin-left: -40px; // == pull-1 in blueprint/grid.css
   }
 
   p {
