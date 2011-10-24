@@ -8,7 +8,7 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
+    = render 'layouts/site_navigation'
     %div.container
-      = render 'layouts/site_navigation'
-      %div.span-16.prepend-4.append-4.last
+      %div.span-20.prepend-2.append-2.last
         = yield

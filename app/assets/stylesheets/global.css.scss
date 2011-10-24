@@ -2,7 +2,8 @@
 
 $fg-color:      #232323;
 $bg-color:      #FFFFFF;
-$accent-color:  #663300;
+$accent-color:  #708090;
+// $accent-color:  #663300;
 
 body {
   background-color: $bg-color;
@@ -17,9 +18,12 @@ body {
 
 /* navigation */
 
+header {
+  background-color: $accent-color;
+}
+
 nav {
-  padding: .8em;
-  margin: 0 0 1em 0;
+  color: $bg-color;
   text-align: center;
 
   li {
@@ -28,13 +32,15 @@ nav {
   }
 
   li a {
+    color: $bg-color;
     font-size: 1.5em;
     font-weight: bold;
-    padding: .5em 2em;
+    font-style: normal;
+    padding: 0 2em;
     
     &:hover {
-      color: $bg-color;
-      background-color: $accent-color;
+      color: $accent-color;
+      background-color: $bg-color;
       text-decoration: none;
     }
   }
@@ -47,9 +53,23 @@ $link-color: darken($fg-color, 10%);
 a {
   color: $link-color;
   text-decoration: none;
+  font-style: italic;
 
   &:hover {
-    color: darken($link-color, 10%);
+    color: lighten($link-color, 20%);
     text-decoration: underline;
+  }
+}
+
+/* main content */
+
+div.container {
+  h1 {
+    color: $accent-color;
+    margin-left: -40px; // som pull-1 i blueprint/grid.css
+  }
+
+  p {
+    text-align: justify;
   }
 }
