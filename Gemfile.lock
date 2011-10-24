@@ -108,9 +108,9 @@ GEM
       thor (~> 0.14.6)
     raindrops (0.7.0)
     rake (0.8.7)
-    rdiscount (1.6.8)
     rdoc (3.10)
       json (~> 1.4)
+    rpeg-markdown (1.4.6)
     rspec (2.7.0)
       rspec-core (~> 2.7.0)
       rspec-expectations (~> 2.7.0)
@@ -168,7 +168,7 @@ DEPENDENCIES
   pg
   rails (= 3.1.1)
   rake (= 0.8.7)
-  rdiscount
+  rpeg-markdown
   rspec
   rspec-rails
   sass-rails (~> 3.1.4)
