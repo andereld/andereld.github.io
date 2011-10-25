@@ -3,6 +3,7 @@ module Haml::Filters::Markdown
   lazy_require 'redcarpet'
 
   def render(text)
-    Redcarpet.new(text).to_html
+    options = [:autolink, :no_intraemphasis, :fenced_code, :gh_blockcode]
+    Redcarpet.new(text, *options).to_html
   end
 end

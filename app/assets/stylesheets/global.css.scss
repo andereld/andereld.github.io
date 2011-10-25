@@ -1,9 +1,18 @@
-/* site-wide */
+/* COLORS */
 
-$fg-color:      #232323;
-$bg-color:      #FFFFFF;
-$accent-color:  #708090;
-// $accent-color:  #663300;
+$fg-color:          #232323; // black
+$bg-color:          #FFFFFF; // white
+$main-accent-color: #708090; // glaucous
+$alt-accent-color:  #663300; // brown
+
+/* for code blocks and such */
+$box-bg-color:         #F3F3F3;
+$box-border: solid 1px #CCCCCC;
+
+/* ordinary links (not navigation) */
+$link-color: darken($main-accent-color, 10%);
+
+/* GENERAL SETTINGS */
 
 body {
   background-color: $bg-color;
@@ -16,17 +25,18 @@ body {
   border-radius: 10px;
 }
 
-/* navigation */
+/* NAVIGATION */
 
 header {
-  background-color: $accent-color;
-  margin-bottom: 1em;
-//  border-bottom: .5em solid darken($accent-color, 10%);
+  background-color: $main-accent-color;
+  margin-bottom: 2.7em;
+  border-bottom: .4em solid darken($main-accent-color, 10%);
 }
 
 nav {
   color: $bg-color;
   text-align: center;
+  height: 2.3em;
 
   li {
     list-style-type: none;
@@ -40,17 +50,39 @@ nav {
     font-style: normal;
     padding: 0 2em;
     
-    &:hover {
-      color: $accent-color;
+    &:hover, &:active {
+      color: $main-accent-color;
       background-color: $bg-color;
       text-decoration: none;
+    }
+
+    &:focus {
+      color: $bg-color;
+      background-color: darken($main-accent-color, 10%);
     }
   }
 }
 
-/* links */
+/* MAIN TEXT */
 
-$link-color: darken($fg-color, 10%);
+div.container {
+  h1 {
+    color: $main-accent-color;
+    margin-left: -40px; // == pull-1 in blueprint/grid.css
+  }
+
+  p {
+    text-align: justify;
+    margin-top: 1em;
+  }
+
+  ul {
+    margin: 0 -40px 0 40px; // == push-1 in blueprint/grid.css
+    list-style-type: square;
+  }
+}
+
+/* LINKS */
 
 a {
   color: $link-color;
@@ -63,15 +95,11 @@ a {
   }
 }
 
-/* main content */
+/* CODE BLOCKS */
 
-div.container {
-  h1 {
-    color: $accent-color;
-    margin-left: -40px; // == pull-1 in blueprint/grid.css
-  }
-
-  p {
-    text-align: justify;
-  }
+pre {
+  background-color: $box-bg-color;
+  border: $box-border;
+  padding: .4em .8em;
+  font-family: 'Menlo', 'Courier New', 'Terminal', monospace;
 }
