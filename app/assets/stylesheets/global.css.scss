@@ -66,6 +66,8 @@ nav {
 /* MAIN TEXT */
 
 div.container {
+  margin-bottom: 2em;
+
   h1 {
     color: $main-accent-color;
     margin-left: -40px; // == pull-1 in blueprint/grid.css
