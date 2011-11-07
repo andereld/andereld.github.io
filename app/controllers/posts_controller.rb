@@ -5,6 +5,6 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @title = @post.title
+    @title = @post.title.truncate(12, :seperator => ' ')
   end
 end
