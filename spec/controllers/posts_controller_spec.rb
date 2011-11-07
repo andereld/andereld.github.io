@@ -34,15 +34,15 @@ describe PostsController do
   end
 
   describe "POST '/posts'" do
-    it "should not create a post without a body" do
-      lambda do
-        post 'create', :title => "Hello, world!"
-      end.should_not change(Post, :count)
-    end
-
     it "should not create a post without a title" do
       lambda do
         post 'create', :body => "Lorem ipsum yada yada"
+      end.should_not change(Post, :count)
+    end
+
+    it "should not create a post without a body" do
+      lambda do
+        post 'create', :title => "Hello, world!"
       end.should_not change(Post, :count)
     end
   end

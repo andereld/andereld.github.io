@@ -1,5 +1,4 @@
-%h1 Posts
-= Post.all.each do |p|
+= Post.all.reverse.each do |p|
   %h2= link_to p.title, p
   .post
     :markdown

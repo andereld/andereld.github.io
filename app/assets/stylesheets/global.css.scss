@@ -82,6 +82,11 @@ div.container {
     margin: 0 -40px 0 40px; // == push-1 in blueprint/grid.css
     list-style-type: square;
   }
+
+  time {
+    font-size: .9em;
+    color: $main-accent-color;
+  }
 }
 
 /* LINKS */
