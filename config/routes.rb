@@ -3,6 +3,8 @@ WwwEldhusetOrg::Application.routes.draw do
   root :to => 'pages#home'
 
   match '/about', :to => 'pages#about'
+  
+  resources :posts
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,6 @@
+%h1 Posts
+= Post.all.each do |p|
+  %h2= link_to p.title, p
+  .post
+    :markdown
+      #{p.body}
