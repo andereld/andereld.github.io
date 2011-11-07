@@ -105,3 +105,26 @@ pre {
   padding: .4em .8em;
   font-family: 'Menlo', 'Courier New', 'Terminal', monospace;
 }
+
+/* FORMS */
+
+.form-field {
+  clear: both;
+}
+
+.form-label {
+  display: block;
+  float: left;
+  text-align: right;
+  margin: .1em 0 0 0;
+}
+
+.form-input {
+  display: block;
+  padding: 0 1em;
+  margin: 1em 5em;
+}
+
+.form-submit {
+  float: right;
+}

@@ -11,4 +11,6 @@
     = render 'layouts/site_navigation'
     .container
       .span-20.prepend-2.append-2.last
+        = if flash[:error]
+          .error= flash[:error]
         = yield

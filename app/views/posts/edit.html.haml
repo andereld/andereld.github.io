@@ -1,0 +1,13 @@
+%h2= @post.title
+
+= form_for @post do |p|
+  .form-field
+    %span.form-label= p.label :title
+    %span.form-input= p.text_field :title
+  .form-field
+    %span.form-label= p.label :body
+    %span.form-input= p.text_area :body
+  .form-field
+    %span.form-submit= p.submit "Post"
+
+= link_to "Delete this post", @post, :method => :delete
