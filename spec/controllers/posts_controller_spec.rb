@@ -26,9 +26,9 @@ describe PostsController do
                                     :content => @post.trunc_title)
     end
 
-    it "should have an h2 with the right title" do
+    it "should have an h1 with the right title" do
       get 'show', :id => @post
-      response.should have_selector('h2',
+      response.should have_selector('h1',
                                     :content => @post.title)
     end
   end
