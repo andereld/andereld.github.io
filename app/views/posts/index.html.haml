@@ -1,5 +1,8 @@
-= Post.all.reverse.each do |p|
-  %h2= link_to p.title, p
-  .post
-    :markdown
-      #{p.body}
+- if Post.any?
+  = Post.all.reverse.each do |p|
+    %h2= link_to p.title, p
+    .post
+      :markdown
+        #{p.body}
+- else
+  %p No posts found.

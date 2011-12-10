@@ -29,6 +29,7 @@ GEM
       activesupport (= 3.1.1)
     activesupport (3.1.1)
       multi_json (~> 1.0)
+    annotate (2.4.0)
     arel (2.2.1)
     builder (3.0.0)
     capistrano (2.9.0)
@@ -164,6 +165,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate
   capistrano
   coffee-rails (~> 3.1.1)
   factory_girl_rails

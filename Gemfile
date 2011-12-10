@@ -25,6 +25,7 @@ group :development do
   gem 'capistrano'
   gem 'rspec-rails'
   gem 'guard-rspec'
+  gem 'annotate'
 end
 
 group :test do
