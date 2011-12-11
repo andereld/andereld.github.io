@@ -1,5 +1,5 @@
 - if Post.any?
-  = Post.all.reverse.each do |p|
+  - Post.all.reverse.each do |p|
     %h2= link_to p.title, p
     != p.publication_date_in_html
     .post
