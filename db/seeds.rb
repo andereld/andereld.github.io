@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+puts "Seeding posts table with galactic nonsense"
+Post.find_or_create_by_title(title: 'A New Post',
+                             body: 'A long time ago in a galaxy far, far away')
+Post.find_or_create_by_title(title: 'The Post Strikes Back',
+                             body: 'Oh no!!!11!1one')

@@ -1,5 +1,5 @@
 %h1= @post.title
-!= publication_date
+!= @post.publication_date_in_html
 .post
   :markdown
     #{@post.body}

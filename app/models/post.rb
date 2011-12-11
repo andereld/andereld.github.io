@@ -20,4 +20,16 @@ class Post < ActiveRecord::Base
   def trunc_title
     self.title.truncate(12, :seperator => ' ')
   end
+
+  def publication_date_in_html
+    if created_at == updated_at
+      "<time datetime='#{created_at.to_date}' pubdate>
+        Posted on #{created_at.to_date}.
+      </time>"
+    else
+      "<time datetime='#{created_at.to_date}' pubdate>
+        Posted on #{created_at.to_date}; updated on #{updated_at.to_date}.
+      </time>"
+    end
+  end
 end

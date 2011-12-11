@@ -4,7 +4,7 @@ class PostsController < ApplicationController
                                :except => [:index, :show]
 
   def index
-    @title = "Posts"
+    @title = "Home"
   end
 
   def show

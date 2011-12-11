@@ -73,13 +73,21 @@ div.container {
     margin-left: -40px; // == pull-1 in blueprint/grid.css
   }
 
+  h2, h3, h4, h5, h6 {
+    color: $main-accent-color;
+    margin-bottom: 0.5em;
+    
+    a {
+      color: $main-accent-color;
+    }
+  }
+
   p {
     text-align: justify;
     margin-top: 1em;
   }
 
   ul {
-    margin: 0 -40px 0 40px; // == push-1 in blueprint/grid.css
     list-style-type: square;
   }
 

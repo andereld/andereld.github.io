@@ -2,6 +2,7 @@ class PagesController < ApplicationController
 
   def home
     @title = "Home"
+    render 'posts/index', :layout => 'home'
   end
 
   def about
