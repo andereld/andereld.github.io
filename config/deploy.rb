@@ -1,13 +1,12 @@
-require "bundler/capistrano"
-
 # Add RVM's lib directory to the load path.
 $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
-
 # Load RVM's capistrano plugin.    
 require "rvm/capistrano"
 
 set :rvm_ruby_string, '1.9.2-head@www-eldhuset.org'
 set :rvm_type, :user  # Don't use system-wide RVM
+
+require "bundler/capistrano"
 
 set :application, "www.eldhuset.org"
 set :user, "www-eldhuset.org"
@@ -52,5 +51,5 @@ namespace :deploy do
 end
 
 after "deploy:update_code", "deploy:symlink_shared"
-before "deploy:assets:precompile", "bundle:install"
+before "deploy:assets:precompile", "deploy:symlink_shared"
 load 'deploy/assets'
