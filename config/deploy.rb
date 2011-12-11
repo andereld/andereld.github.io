@@ -52,4 +52,5 @@ namespace :deploy do
 end
 
 after "deploy:update_code", "deploy:symlink_shared"
+before "deploy:assets:precompile", "bundle:install"
 load 'deploy/assets'
