@@ -18,7 +18,7 @@ class Post < ActiveRecord::Base
   validates :body,  :presence => true
 
   def trunc_title
-    self.title.truncate(12, :seperator => ' ')
+    title.truncate(12, :seperator => ' ')
   end
 
   def publication_date_in_html
