@@ -2,8 +2,17 @@ module Haml::Filters::Markdown
   include Haml::Filters::Base
   lazy_require 'redcarpet'
 
-  def render(text)
-    options = [:autolink, :no_intraemphasis, :fenced_code, :gh_blockcode]
-    Redcarpet.new(text, *options).to_html
+  options = {
+              :autolink => true,
+              :no_intraemphasis => true,
+              :superscript => true,
+              :fenced_code => true,
+              :gh_blockcode => true
+            }
+  markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, options)
+
+  # using define_method rather than def to keep 'markdown' in scope
+  define_method(:render) do |text|
+    markdown.render(text)
   end
 end
