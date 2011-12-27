@@ -25,7 +25,7 @@ set :rails_env, "production"
 set :deploy_to, "/home/www-eldhuset.org/app"
 set :normalize_asset_timestamps, false
 
-set :rake, "rake --trace"
+set :rake, "bundle exec rake --trace"
 
 namespace :deploy do
   desc "Symlink database.yml"
@@ -51,5 +51,6 @@ namespace :deploy do
 end
 
 after "deploy:update_code", "deploy:symlink_shared"
+before "deploy:assets:precompile", "bundle:install"
 before "deploy:assets:precompile", "deploy:symlink_shared"
 load 'deploy/assets'
