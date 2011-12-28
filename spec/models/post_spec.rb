@@ -25,4 +25,10 @@ describe Post do
     p = Post.new(:title => long_title, :body => @post.body)
     p.should_not be_valid
   end
+
+  it "should reject invalid / non-image files" do
+    f = File.open("#{Rails.root}/spec/data/nonsense.png")
+    p = Post.new(:title => @post.title, :body => @post.body, :image => f)
+    p.should_not be_valid
+  end
 end

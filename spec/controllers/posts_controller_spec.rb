@@ -31,6 +31,18 @@ describe PostsController do
       response.should have_selector('h1',
                                     :content => @post.title)
     end
+    
+    it "should include an img when an image is included" do
+      get 'show', :id => @post
+      response.should have_selector('img',
+                                    :src => @post.image.thumb.url)
+    end
+
+    it "should link to the full-size image" do
+      get 'show', :id => @post
+      response.should have_selector('a',
+                                    :href => @post.image.url)
+    end
   end
 
   describe "POST '/posts'" do
