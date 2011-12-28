@@ -1,13 +1,14 @@
 # == Schema Information
-# Schema version: 20111107022547
+# Schema version: 20111227213120
 #
 # Table name: posts
 #
 #  id         :integer         not null, primary key
-#  title      :string(255)
-#  body       :text
 #  created_at :datetime
 #  updated_at :datetime
+#  title      :string(255)
+#  body       :text
+#  image      :string(255)
 #
 
 class Post < ActiveRecord::Base
