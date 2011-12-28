@@ -11,7 +11,8 @@
 #
 
 class Post < ActiveRecord::Base
-  attr_accessible :title, :body
+  attr_accessible :title, :body, :image, :remove_image
+  mount_uploader :image, ImageUploader
 
   validates :title, :presence => true,
                     :length   => { :maximum => 255 }
