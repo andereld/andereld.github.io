@@ -30,7 +30,7 @@ class Post < ActiveRecord::Base
       "</time>"
     else
       "<time datetime='#{created_at.to_date}' pubdate>" +
-        "Posted on #{created_at.to_date}; updated on #{updated_at.to_date}." +
+        "Posted on #{created_at.to_date}; edited on #{updated_at.to_date}." +
       "</time>"
     end
   end
