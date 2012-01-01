@@ -1,0 +1,6 @@
+- if post.created_at.to_date == post.updated_at.to_date
+  %time{ :datetime => '#{post.created_at.to_date}', :pubdate => true }
+    Posted on #{post.created_at.to_date}. 
+- else
+  %time{ :datetime => '#{post.created_at.to_date}', :pubdate => true }
+    Posted on #{post.created_at.to_date}; edited on #{post.updated_at.to_date}.

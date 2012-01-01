@@ -2,9 +2,11 @@
   - Post.all.reverse.each do |p|
     %article
       %h2= link_to p.title, p
-      != p.publication_date_in_html
+      = render :partial => 'posts/pubdate',
+                           :locals => { :post => p }
       = render :partial => 'posts/image',
-               :locals => { :post => p, :image_link => p }
+                           :locals => { :post => p,
+                                        :image_link => p }
       :markdown
         #{p.body}
       %hr
