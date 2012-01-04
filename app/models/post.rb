@@ -22,4 +22,8 @@ class Post < ActiveRecord::Base
   def trunc_title
     title.truncate(12, :seperator => ' ')
   end
+
+  def pubdate
+    created_at.to_date
+  end
 end
