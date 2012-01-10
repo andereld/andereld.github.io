@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+
   http_basic_authenticate_with :name => APP_CONFIG['username'],
                                :password => APP_CONFIG['password'],
                                :except => [:index, :show]
@@ -26,11 +27,11 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(params[:post])
     if @post.save
-      flash[:success] = "Created post #{@post.title}."
+      flash[:success] = "Created post ‘#{@post.title}’."
       @title = @post.trunc_title
       render 'show'
     else
-      redirect_to @post, :flash => "Success"
+      redirect_to @post, :flash => "Couldn't save post."
     end
   end
 
