@@ -1,6 +1,10 @@
-%h1= @post.title
-!= @post.publication_date_in_html
-.post
+%article
+  %h1= @post.title
+  = render :partial => 'posts/pubdate',
+                       :locals => { :post => @post } 
+  = render :partial => 'posts/image',
+                       :locals => { :post => @post,
+                                    :image_link => @post.image.url }
   :markdown
     #{@post.body}
 

@@ -12,6 +12,7 @@ Spork.prefork do
   require 'rspec/autorun'
 
   require 'factory_girl'
+  FactoryGirl.factories.clear
   FactoryGirl.find_definitions
 
   # Requires supporting ruby files with custom matchers and macros, etc,

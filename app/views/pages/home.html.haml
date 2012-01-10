@@ -1,3 +1,5 @@
+%h1 Welcome to eldhuset.org
+
 - if Post.any?
   - Post.all.reverse.each do |p|
     %article
@@ -8,7 +10,9 @@
                            :locals => { :post => p,
                                         :image_link => p }
       :markdown
-        #{p.body}
+        #{p.body.truncate(512, :seperator => " ", :omission => " …")}
+      - if p.body.size > 512
+        = link_to "View entire post", p
       %hr
 - else
   %p No posts found.

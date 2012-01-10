@@ -25,13 +25,14 @@ set :rails_env, "production"
 set :deploy_to, "/home/www-eldhuset.org/app"
 set :normalize_asset_timestamps, false
 
-set :rake, "rake --trace"
+set :rake, "bundle exec rake --trace"
 
 namespace :deploy do
   desc "Symlink database.yml"
   task :symlink_shared do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     run "ln -nfs #{shared_path}/config/config.yml #{release_path}/config/config.yml"
+    run "ln -nfs #{shared_path}/uploads #{release_path}/public/uploads"
   end
 
   desc "Zero-downtime restart of Unicorn"
@@ -51,5 +52,6 @@ namespace :deploy do
 end
 
 after "deploy:update_code", "deploy:symlink_shared"
+before "deploy:assets:precompile", "bundle:install"
 before "deploy:assets:precompile", "deploy:symlink_shared"
 load 'deploy/assets'

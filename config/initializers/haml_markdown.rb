@@ -6,8 +6,7 @@ module Haml::Filters::Markdown
               :autolink => true,
               :no_intraemphasis => true,
               :superscript => true,
-              :fenced_code => true,
-              :gh_blockcode => true
+              :fenced_code_blocks => true
             }
   markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, options)
 

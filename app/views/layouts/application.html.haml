@@ -6,12 +6,12 @@
     /[if lt IE 8]
       = stylesheet_link_tag "blueprint/ie"
     = javascript_include_tag "application"
+    = favicon_link_tag "favicon.png", :type => "image/png"
     = csrf_meta_tags
   %body
     = render 'layouts/site_navigation'
     .container
       .span-20.prepend-2.append-2.last
-        = yield :home
         = if flash[:error]
           .error= flash[:error]
         = yield

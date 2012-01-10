@@ -8,6 +8,12 @@
     %span.form-label= p.label :body
     %span.form-input= p.text_area :body
   .form-field
+    %span.form-label= p.label :image
+    %span.form-input= p.file_field :image
+  .form-field
+    %span.form-label= p.label :remove_image
+    %span.form-input= p.check_box :remove_image
+  .form-field
     %span.form-submit= p.submit "Post"
 
 = link_to "Delete this post", @post, :method => :delete,

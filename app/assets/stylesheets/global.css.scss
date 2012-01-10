@@ -91,9 +91,18 @@ div.container {
     list-style-type: square;
   }
 
-  time {
+  div.byline {
     font-size: .9em;
     color: $main-accent-color;
+
+    a {
+      font-style: normal;
+      color: $main-accent-color;
+    }
+  }
+
+  hr {
+    margin: 17px 0;
   }
 }
 

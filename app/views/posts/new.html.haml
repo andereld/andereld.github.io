@@ -7,4 +7,7 @@
     %span.form-label= p.label :body
     %span.form-input= p.text_area :body
   .form-field
+    %span.form-label= p.label :image
+    %span.form-input= p.file_field :image
+  .form-field
     %span.form-submit= p.submit "Post"
