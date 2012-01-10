@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class PostsController < ApplicationController
 
   http_basic_authenticate_with :name => APP_CONFIG['username'],
