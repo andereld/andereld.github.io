@@ -28,6 +28,8 @@ class Post < ActiveRecord::Base
   end
 
   def to_html
-    Haml::Filters::Markdown.render(body)
+    # for some reason, '\n' is simply removed by the call to render, 
+    # concatenating the words that surround it, hence the translation
+    Haml::Filters::Markdown.render(body.tr("\n", " "))
   end
 end
