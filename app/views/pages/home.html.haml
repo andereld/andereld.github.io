@@ -4,13 +4,16 @@
   - Post.all.reverse.each do |p|
     %article
       %h2= link_to p.title, p
+
       = render :partial => 'posts/pubdate',
                            :locals => { :post => p }
       = render :partial => 'posts/image',
                            :locals => { :post => p,
                                         :image_link => p }
-      :markdown
-        #{p.body.truncate(512, :seperator => " ", :omission => " …")}
+
+      = truncate_html(p.to_html, :length => 512,
+                                 :seperator => " ",
+                                 :omission => " …")
       - if p.body.size > 512
         = link_to "View entire post", p
       %hr

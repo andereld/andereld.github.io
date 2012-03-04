@@ -5,11 +5,12 @@ gem 'rails', '3.2.1'
 gem 'unicorn'
 gem 'jquery-rails'
 gem 'haml'
+gem 'redcarpet'
+gem 'truncate_html'
 gem 'carrierwave'
 gem 'rmagick'
 
 group :assets do
-  gem 'redcarpet'
   gem 'sass-rails'
   gem 'coffee-rails'
   gem 'uglifier'

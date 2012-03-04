@@ -26,4 +26,8 @@ class Post < ActiveRecord::Base
   def pubdate
     created_at.to_date
   end
+
+  def to_html
+    Haml::Filters::Markdown.render(body)
+  end
 end
