@@ -70,6 +70,7 @@ div.container {
 
   h1 {
     color: $main-accent-color;
+    text-indent: -1em;
     margin-left: -40px; // == pull-1 in blueprint/grid.css
   }
 
