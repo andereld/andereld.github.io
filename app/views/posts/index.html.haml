@@ -1,5 +1,5 @@
 - if Post.any?
-  - Post.all.reverse.each do |p|
+  - Post.order('created_at DESC').each do |p|
     %article
       %h2= link_to p.title, p
       = render :partial => 'posts/pubdate',
