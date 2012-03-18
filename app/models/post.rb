@@ -19,10 +19,6 @@ class Post < ActiveRecord::Base
                     :length   => { :maximum => 255 }
   validates :body,  :presence => true
 
-  def trunc_title
-    title.truncate(12, :seperator => ' ')
-  end
-
   def pubdate
     created_at.to_date
   end

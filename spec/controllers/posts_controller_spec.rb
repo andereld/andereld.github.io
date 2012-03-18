@@ -20,10 +20,10 @@ describe PostsController do
       response.should be_success
     end
 
-    it "should have the right title" do
+    it "should have the right <title>" do
       get 'show', :id => @post
       response.should have_selector('title',
-                                    :content => @post.trunc_title)
+                                    :content => @post.title)
     end
 
     it "should have an h1 with the right title" do

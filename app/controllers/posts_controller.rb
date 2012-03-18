@@ -12,7 +12,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @title = @post.trunc_title
+    @title = @post.title
   rescue ActiveRecord::RecordNotFound
     redirect_to :action => 'index'
   end
@@ -30,7 +30,7 @@ class PostsController < ApplicationController
     @post = Post.new(params[:post])
     if @post.save
       flash[:success] = "Created post ‘#{@post.title}’."
-      @title = @post.trunc_title
+      @title = @post.title
       render 'show'
     else
       redirect_to @post, :flash => "Couldn't save post."
