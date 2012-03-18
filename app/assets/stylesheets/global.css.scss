@@ -112,7 +112,6 @@ div.container {
 a {
   color: $link-color;
   text-decoration: none;
-  font-style: italic;
 
   &:hover {
     color: lighten($link-color, 20%);
