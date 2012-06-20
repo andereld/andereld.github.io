@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rake'
-gem 'rails', '3.2.1'
+gem 'rails', '3.2.6'
 gem 'unicorn'
 gem 'jquery-rails'
 gem 'haml'
@@ -21,10 +21,10 @@ group :production do
 end
 
 group :development do
+  gem 'capistrano'
   gem 'rvm-capistrano'
   gem 'haml-rails'
   gem 'sqlite3'
-  gem 'capistrano'
   gem 'rspec-rails'
   gem 'guard-rspec'
   gem 'annotate'
