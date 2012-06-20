@@ -21,6 +21,7 @@ group :production do
 end
 
 group :development do
+  gem 'rvm-capistrano'
   gem 'haml-rails'
   gem 'sqlite3'
   gem 'capistrano'
