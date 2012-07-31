@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rake'
-gem 'rails', '3.2.6'
+gem 'rails', '3.2.7'
 gem 'unicorn'
 gem 'jquery-rails'
 gem 'haml'
@@ -28,6 +28,7 @@ group :development do
   gem 'rspec-rails'
   gem 'guard-rspec'
   gem 'annotate'
+  gem 'rack-mini-profiler'
 end
 
 group :test do
