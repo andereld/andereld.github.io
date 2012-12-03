@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rake'
-gem 'rails', '3.2.7'
+gem 'rails', '3.2.8'
 gem 'unicorn'
 gem 'jquery-rails'
 gem 'haml'
