@@ -29,6 +29,7 @@ group :development do
   gem 'guard-rspec'
   gem 'annotate'
   gem 'rack-mini-profiler'
+  gem 'pry'
 end
 
 group :test do
