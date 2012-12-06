@@ -20,8 +20,6 @@ body {
 }
 
 .round {
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
   border-radius: 10px;
 }
 
@@ -72,6 +70,10 @@ div.container {
     color: $main-accent-color;
     text-indent: -.3em;
     margin-left: -40px; // == pull-1 in blueprint/grid.css
+
+    a {
+      color: $main-accent-color;
+    }
   }
 
   h2, h3, h4, h5, h6 {

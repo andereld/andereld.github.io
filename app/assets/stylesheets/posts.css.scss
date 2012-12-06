@@ -5,4 +5,8 @@
 img.post_image {
   margin-top: 1em;
   display: block;
+  border-radius: 20px;
+  box-shadow: 4px 3px 3px #999;
+  -webkit-transform: rotate(-.15deg); // necessary (for now)
+  transform: rotate(-.15deg);
 }

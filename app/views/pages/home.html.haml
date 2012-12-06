@@ -1,9 +1,7 @@
-%h1 Welcome to eldhuset.org
-
 - if Post.any?
   - Post.order('created_at DESC').each do |p|
     %article
-      %h2= link_to p.title, p
+      %h1= link_to p.title, p
 
       = render :partial => 'posts/pubdate',
                            :locals => { :post => p }
