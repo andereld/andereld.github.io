@@ -10,7 +10,6 @@
                                         :image_link => p }
 
       = truncate_html(p.to_html, :length => 512,
-                                 :seperator => " ",
                                  :omission => " …")
       - if p.body.size > 512
         = link_to "View entire post", p
