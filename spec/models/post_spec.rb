@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Post do
   
   before(:each) do
-    @post = Factory(:post)
+    @post = FactoryGirl.create(:post)
   end
 
   it "should create a new post given valid input" do

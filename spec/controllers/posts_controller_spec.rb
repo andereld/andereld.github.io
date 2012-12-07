@@ -12,7 +12,7 @@ describe PostsController do
 
   describe "GET '/posts/:id'" do
     before(:each) do
-      @post = Factory(:post)
+      @post = FactoryGirl.create(:post)
     end
 
     it "returns HTTP success" do
