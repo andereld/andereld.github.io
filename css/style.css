@@ -1,13 +1,44 @@
+---
+accent-color: '#708090'
+---
+
 @import url(pygments.css);
 
-html, body {
+/* Reset */
+
+* {
     margin: 0;
     padding: 0;
 }
 
-div#content {
-    width: 50%;
-    margin: 1em auto 0 auto;
+h1, p {
+    margin: 1em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* General presentation */
+
+html, body {
+    font-family: 'Helvetica Neue';
+}
+
+p {
+    text-align: justify;
+}
+
+a {
+    color: {{ page.accent-color }};
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 img {
@@ -19,4 +50,45 @@ img {
     box-shadow: .2em .2em .3em #999;
     transform: rotate(-.15deg);
     -webkit-transform: rotate(-.15deg);
+}
+
+/* Navigation */
+
+nav {
+    height: 2.4em;
+    padding-top: .3em;
+    text-align: center;
+    background: {{ page.accent-color }};
+    margin-bottom: 2em;
+    box-shadow: .08em .15em .3em #999;
+}
+
+nav ul li {
+    display: inline;
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: #FFF;
+    font-size: 1.7em;
+    font-weight: bold;
+    padding: 0 2em;
+    text-decoration: none;
+    font-variant: small-caps;
+    text-shadow: -0.05em -0.04em 0.02em #333;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: {{ page.accent-color }};
+    background-color: #FFF;
+    border-radius: .3em;
+    text-shadow: 0.05em 0.04em 0.01em #999;
+}
+
+/* Main content */
+
+div#content {
+    width: 50%;
+    margin: 1em auto 0 auto;
 }
