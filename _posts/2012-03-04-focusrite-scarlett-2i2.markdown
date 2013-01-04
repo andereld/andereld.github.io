@@ -3,8 +3,6 @@ layout: post
 title: The Focusrite Scarlett 2i2 & Linux
 ---
 
-# The Focusrite Scarlett 2i2 & Linux
-
 ![Focusrite Scarlett 2i2](/images/2012-03-04-scarlett.jpg)
 
 I recently purchased a [Focusrite Scarlett 2i2][Scarlett] audio interface with

@@ -3,8 +3,6 @@ layout: post
 title: Premier Brew
 ---
 
-# Premier Brew
-
 ![Cooper's draught](/images/2012-01-01-coopers-draught.jpg)
 
 I bottled my first batch of homebrewed beer some weeks ago. The process leading

@@ -3,5 +3,13 @@ layout: default
 ---
 
 <article>
+  <header>
+    <h1>{{ page.title }}</h1>
+    <div class='byline'>
+      Posted on <time datetime='{{ page.date | date: "%Y-%m-%d" }}' pubdate>
+      {{ page.date | date: "%Y-%m-%d" }}<time>
+      by <a href='/about' rel='author'>Anders Wold Eldhuset</a>.
+    </div>
+  </header>
  {{ content }}
 </article>

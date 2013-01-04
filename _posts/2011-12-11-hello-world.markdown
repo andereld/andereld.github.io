@@ -3,8 +3,6 @@ layout: post
 title: Hello, world!
 ---
 
-# Hello, world!
-
 Hi there, and welcome to my site!
 
 I'd like to take this opportunity to let you know what kind of content you

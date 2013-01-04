@@ -3,8 +3,6 @@ layout: post
 title: A Brewing Update
 ---
 
-# A Brewing Update
-
 ![Cooper's stout](/images/2012-03-17-coopers-stout.jpg)
 
 About three months ago, I brewed my first batch of beer and wrote a
