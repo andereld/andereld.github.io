@@ -1,0 +1,22 @@
+@import url(pygments.css);
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+div#content {
+    width: 50%;
+    margin: 1em auto 0 auto;
+}
+
+img {
+    display: block;
+    margin: 1em auto 1em auto;
+    max-width: 100%;
+
+    border-radius: 2.5%;
+    box-shadow: .2em .2em .3em #999;
+    transform: rotate(-.15deg);
+    -webkit-transform: rotate(-.15deg);
+}
