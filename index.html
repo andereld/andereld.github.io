@@ -1,0 +1,24 @@
+---
+layout: default
+title: eldhuset.org
+---
+
+<section>
+  <header>
+    <h1>Blog posts</h1>
+  </header>
+  <ul id='posts'>
+    {% for post in site.posts %}
+      <li>
+        <date datetime='{{ post.date | date: "%Y-%m-%d" }}' pubdate>
+          {{ post.date | date: "%Y-%m-%d" }}
+        </date>
+        <h2><a href='{{ post.url }}'>{{ post.title }}</a></h2>
+        <p class='excerpt'>
+          {{ post.content | strip_html | truncatewords: 64 }}
+          <a href='{{ post.url }}' class='view-post'>View post</a>
+        </p>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

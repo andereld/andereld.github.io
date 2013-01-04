@@ -103,3 +103,27 @@ div#content {
 div.byline {
     color: slategray;
 }
+
+ul#posts li {
+    list-style-type: none;
+}
+
+ul#posts li date {
+    margin-left: -1em;
+    margin-right: .5em;
+    color: lightslategray;
+}
+
+ul#posts li h2 {
+    display: inline;
+}
+
+ul#posts li h2 a {
+    color: darkslategray;
+}
+
+ul#posts li p a.view-post {
+    display: block;
+    float: right;
+    margin-top: .3em;
+}
