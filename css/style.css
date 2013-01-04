@@ -11,10 +11,6 @@ accent-color: '#708090'
     padding: 0;
 }
 
-h1, p {
-    margin: 1em 0;
-}
-
 h1, h2, h3, h4, h5, h6 {
     font-size: 100%;
 }
@@ -29,8 +25,16 @@ html, body {
     font-family: 'Helvetica Neue';
 }
 
+h1 {
+    font-size: 3em;
+    text-indent: -1em;
+    margin-bottom: .5em;
+    color: {{ page.accent-color }};
+}
+
 p {
     text-align: justify;
+    margin: 1em 0;
 }
 
 a {
@@ -39,6 +43,12 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+pre {
+    padding: 1em;
+    background-color: rgba(240, 200, 12, 0.05);
+    border: 1px solid rgba(240, 200, 12, 0.3);
 }
 
 img {
@@ -91,4 +101,8 @@ nav ul li a:hover {
 div#content {
     width: 50%;
     margin: 1em auto 0 auto;
+}
+
+div.byline {
+    color: {{ page.accent-color }};
 }
