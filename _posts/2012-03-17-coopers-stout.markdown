@@ -37,6 +37,6 @@ room I did the labeling in did smell of milk for a short while, but the labeled
 bottles did not—so you needn't worry about your beer bottles smelling like
 milk gone bad should you use this method.
 
-[post]: /posts/8 "Premier Brew"
+[post]: {% post_url 2012-01-01-premier-brew %} "Premier Brew"
 [Abakus]: http://www.abakus.no "Abakus"
 [NTNU]: http://www.ntnu.edu "The Norwegian University of Science and Technology"
