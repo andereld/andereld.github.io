@@ -24,13 +24,29 @@ html, body {
 h1 {
     font-size: 3em;
     text-indent: -1em;
-    margin-bottom: .5em;
+    margin: .5em 0;
+    color: slategray;
+}
+
+h2, h3, h4, h5, h6 {
+    margin: 1em 0;
     color: slategray;
 }
 
 p {
-    text-align: justify;
     margin: 1em 0;
+    text-align: justify;
+}
+
+ul, ol {
+    margin-left: 2em;
+}
+
+pre {
+    padding: 1em;
+    margin: 1em 0;
+    background-color: rgba(240, 200, 12, 0.02);
+    border: 1px solid rgba(240, 200, 12, 0.2);
 }
 
 a {
@@ -39,13 +55,6 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-pre {
-    padding: 1em;
-    margin: 1em 0;
-    background-color: rgba(240, 200, 12, 0.02);
-    border: 1px solid rgba(240, 200, 12, 0.2);
 }
 
 img {
@@ -68,6 +77,10 @@ nav {
     background: slategray;
     margin-bottom: 2em;
     box-shadow: .08em .2em .3em darkgray;
+}
+
+nav ul {
+    margin-left: 0;
 }
 
 nav ul li {
