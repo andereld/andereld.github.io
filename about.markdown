@@ -23,8 +23,8 @@ If you'd like to contact me, you can send an email to **anders** at
 
 # About this site
 
-This website runs on free and open source software. The list below names
-some of tools involved in delivering my words to you.
+This website runs on free and open source software. The list below names some
+of the tools involved in delivering my words to you.
 
 * [Jekyll](http://jekyllrb.com/)
 * [Git](http://git-scm.com)
