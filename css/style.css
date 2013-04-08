@@ -111,6 +111,7 @@ nav ul li a:hover {
 div#content {
     width: 50%;
     margin: 1em auto 0 auto;
+    max-width: 800px;
 }
 
 div.byline {
