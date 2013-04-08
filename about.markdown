@@ -21,20 +21,6 @@ the following domains:
 If you'd like to contact me, you can send an email to **anders** at
 **eldhuset.org**.
 
-# About this site
-
-This website runs on free and open source software. The list below names some
-of the tools involved in delivering my words to you.
-
-* [Jekyll](http://jekyllrb.com/)
-* [Git](http://git-scm.com)
-* [nginx](http://nginx.org/)
-* [Arch Linux](http://www.archlinux.org)
-
-The source code of the website itself is also available online; you can find it
-on [GitHub](https://github.com/andereld/eldhuset.org).
-
-
 [NTNU]: http://www.ntnu.edu "NTNU"
 [readme]: https://abakus.no/pages/view/komiteer/readme "readme"
 [samfundet]: http://www.samfundet.no "Samfundet"
