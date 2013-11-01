@@ -16,7 +16,7 @@ the following domains:
 
 - [GitHub](https://github.com/andereld)
 - [LinkedIn](http://www.linkedin.com/pub/anders-wold-eldhuset/5b/185/991)
-- [Google+](https://plus.google.com/113650343243081740523?rel=author)
+- [Google+](https://plus.google.com/+AndersWoldEldhuset?rel=author)
 
 If you'd like to contact me, you can send an email to **anders** at
 **eldhuset.org**.
